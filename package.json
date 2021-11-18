@@ -1,9 +1,9 @@
 {
-  "name": "sharp",
+  "name": "@driannaude/sharp",
   "description": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images",
-  "version": "0.29.3",
-  "author": "Lovell Fuller <npm@lovell.info>",
-  "homepage": "https://github.com/lovell/sharp",
+  "version": "0.29.4",
+  "author": "Drian Naude <drian.naude@bitlab.co.nz>",
+  "homepage": "https://github.com/driannaude/sharp",
   "contributors": [
     "Pierre Inglebert <pierre.inglebert@gmail.com>",
     "Jonathan Ong <jonathanrichardong@gmail.com>",
@@ -103,7 +103,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/lovell/sharp"
+    "url": "git://github.com/driannaude/sharp"
   },
   "keywords": [
     "jpeg",
