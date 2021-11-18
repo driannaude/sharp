@@ -1,5 +1,7 @@
 # sharp
 
+> **_NOTE:_** This is a forked package of [lovell/sharp](https://github.com/lovell/sharp) that temporarily fixes the [duplex stream issues](https://github.com/lovell/sharp/issues/2898) until v0.30.0 is released. This package will not be maintained in future, and we suggest switching back to the original package once v0.30.0 is released.
+
 <img src="https://cdn.jsdelivr.net/gh/lovell/sharp@master/docs/image/sharp-logo.svg" width="160" height="160" alt="sharp logo" align="right">
 
 The typical use case for this high speed Node.js module
@@ -34,7 +36,7 @@ npm install sharp
 ```
 
 ```javascript
-const sharp = require('sharp');
+const sharp = require("sharp");
 ```
 
 ### Callback
@@ -65,8 +67,8 @@ const semiTransparentRedPng = await sharp({
     width: 48,
     height: 48,
     channels: 4,
-    background: { r: 255, g: 0, b: 0, alpha: 0.5 }
-  }
+    background: { r: 255, g: 0, b: 0, alpha: 0.5 },
+  },
 })
   .png()
   .toBuffer();
@@ -79,18 +81,17 @@ const roundedCorners = Buffer.from(
   '<svg><rect x="0" y="0" width="200" height="200" rx="50" ry="50"/></svg>'
 );
 
-const roundedCornerResizer =
-  sharp()
-    .resize(200, 200)
-    .composite([{
+const roundedCornerResizer = sharp()
+  .resize(200, 200)
+  .composite([
+    {
       input: roundedCorners,
-      blend: 'dest-in'
-    }])
-    .png();
+      blend: "dest-in",
+    },
+  ])
+  .png();
 
-readableStream
-  .pipe(roundedCornerResizer)
-  .pipe(writableStream);
+readableStream.pipe(roundedCornerResizer).pipe(writableStream);
 ```
 
 ## Contributing
